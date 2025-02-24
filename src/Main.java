@@ -8,7 +8,10 @@ public class Main {
         System.out.println(result);
     }
 
-    private static String removeDuplicates(String names) {
+    public static String removeDuplicates(String names) {
+        if (names==null){
+            return "";
+        }
         String [] nameArray = names.split(",");   // разбиваем строку по запятой
         Set<String> uniqueNames = new LinkedHashSet<>();   // LinkedHashSet - сохраняет порядок добавления элементов и автоматически удаляет дубликаты
         for (String name : nameArray){
